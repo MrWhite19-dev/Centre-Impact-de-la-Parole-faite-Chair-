@@ -1,0 +1,243 @@
+@media (max-width: 1040px) {
+  :root {
+    --header-height: 115px;
+  }
+
+  .site-header {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 20px;
+    left: 20px;
+    display: none;
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 5px;
+    background: rgba(33, 23, 20, 0.98);
+    box-shadow: var(--shadow);
+  }
+
+  .main-nav.is-open {
+    display: flex;
+  }
+
+  .main-nav a {
+    padding: 11px 9px;
+  }
+
+  .main-nav a[aria-current="page"]::after {
+    right: auto;
+    bottom: 5px;
+    left: 9px;
+    width: 30px;
+  }
+
+  .news-panel {
+    gap: 18px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+  }
+
+  .news-actions {
+    grid-column: 1 / -1;
+  }
+
+  .footer-grid {
+    gap: 28px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .section {
+    padding-top: 74px;
+    padding-bottom: 74px;
+  }
+
+  .hero {
+    min-height: 620px;
+    padding: 80px 20px 125px;
+  }
+
+  .hero-image {
+    object-position: center 46%;
+  }
+
+  .presentation-grid,
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .presentation-photo {
+    min-height: 340px;
+    grid-row: 1;
+  }
+
+  .values-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .news-panel {
+    margin-top: -64px;
+    padding: 22px;
+  }
+
+  .footer-grid {
+    gap: 26px 18px;
+  }
+}
+
+@media (max-width: 560px) {
+  :root {
+    --header-height: 109px;
+  }
+
+  .site-header {
+    padding: 9px 16px;
+    gap: 10px;
+  }
+
+  .logo-cipc {
+    width: 90px;
+    height: 90px;
+    flex-basis: 90px;
+  }
+
+  .brand {
+    gap: 9px;
+  }
+
+  .brand-text b {
+    font-size: 15px;
+  }
+
+  .brand-text small {
+    max-width: 165px;
+    font-size: 9px;
+  }
+
+  .main-nav {
+    right: 12px;
+    left: 12px;
+  }
+
+  .section-wrap {
+    width: min(calc(100% - 34px), var(--content-width));
+  }
+
+  .hero {
+    min-height: 590px;
+    padding: 70px 17px 115px;
+  }
+
+  h1 {
+    font-size: clamp(39px, 11vw, 56px);
+  }
+
+  .hero-content > p {
+    font-size: 15px;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .news-panel {
+    margin-top: -55px;
+    gap: 16px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .news-actions {
+    grid-column: auto;
+    flex-direction: column;
+  }
+
+  .news-actions .button {
+    width: 100%;
+  }
+
+  .section {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .presentation-photo {
+    min-height: 270px;
+  }
+
+  .form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .field-full {
+    grid-column: auto;
+  }
+
+  .contact-form {
+    padding: 19px;
+  }
+
+  .footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .back-to-top {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .whatsapp-float {
+    right: 16px;
+    bottom: 72px;
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-header {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .brand-text small {
+    max-width: 120px;
+  }
+
+  .hero {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .button {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .form-result dl {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+  }
+}

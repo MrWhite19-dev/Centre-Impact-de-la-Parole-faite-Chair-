@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#211714">
+    <meta
+      name="description"
+      content="Découvrez les départements du Centre Impact de la Parole faite Chair et demandez à rejoindre une équipe."
+    >
+    <title>Départements — CIPC</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/navigation.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/forms.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="CIPC — Accueil">
+        <img
+          src="images/logo-cipc.png"
+          alt="Logo officiel CIPC"
+          class="logo-cipc"
+          width="55"
+          height="55"
+        >
+        <span class="brand-text">
+          <b>CIPC</b>
+          <small>Centre Impact de la Parole faite Chair</small>
+        </span>
+      </a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span aria-hidden="true">☰</span>
+      </button>
+      <nav class="main-nav" id="primary-navigation" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#evenements">Événements</a>
+        <a href="departements.html" aria-current="page">Départements</a>
+        <a href="vocations.html">Messages</a>
+        <a href="index.html#pages">Pages</a>
+        <a class="button button-small" href="index.html#contact">Nous contacter</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section section-wrap" aria-labelledby="departments-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker">Engagement & service</p>
+            <h1 class="section-title" id="departments-title">
+              Trouver sa place pour servir
+            </h1>
+            <p class="section-intro">
+              Les ministères du CIPC seront présentés ici après validation de
+              leurs noms et descriptions par les responsables de l'Église.
+            </p>
+          </div>
+        </div>
+
+        <div class="empty-state reveal">
+          <span class="empty-icon" aria-hidden="true">◇</span>
+          <h2>Liste officielle en préparation</h2>
+          <p>
+            Aucun département n'est affiché tant que la liste et les
+            renseignements correspondants n'ont pas été confirmés.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="section section-alt"
+        id="rejoindre"
+        aria-labelledby="join-title"
+      >
+        <div class="section-wrap contact-grid">
+          <div class="reveal">
+            <p class="section-kicker">Passer à l'action</p>
+            <h2 class="section-title" id="join-title">
+              Demander à rejoindre une équipe
+            </h2>
+            <p class="section-intro">
+              Indiquez le département qui vous intéresse. Votre demande sera
+              récapitulée à l'écran; elle n'est pas enregistrée sur un serveur.
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <span>Besoin d'aide ?</span>
+                <a href="tel:+2250758699590">Appeler le CIPC · 07 58 69 9590</a>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" id="departmentForm">
+            <h3>Votre demande</h3>
+            <div class="form-grid">
+              <div class="field">
+                <label for="department-name">Nom complet</label>
+                <input
+                  id="department-name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                >
+              </div>
+              <div class="field">
+                <label for="department-phone">Numéro de téléphone</label>
+                <input
+                  id="department-phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  required
+                >
+              </div>
+              <div class="field field-full">
+                <label for="department-email">Adresse e-mail (facultative)</label>
+                <input
+                  id="department-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                >
+              </div>
+              <div class="field field-full">
+                <label for="department-group">Département souhaité</label>
+                <input
+                  id="department-group"
+                  name="department"
+                  placeholder="À préciser"
+                  required
+                >
+              </div>
+              <div class="field field-full">
+                <label for="department-message">Message (facultatif)</label>
+                <textarea id="department-message" name="message" rows="4"></textarea>
+              </div>
+            </div>
+            <p class="form-note">
+              Vos informations restent dans cette page et ne sont pas stockées.
+            </p>
+            <button class="button" type="submit">Préparer ma demande</button>
+            <div
+              class="form-result"
+              id="departmentResult"
+              role="status"
+              aria-live="polite"
+              tabindex="-1"
+              hidden
+            >
+              <h3>Récapitulatif de votre demande</h3>
+              <dl></dl>
+              <p class="result-message"></p>
+              <a class="button button-small whatsapp-link" hidden>
+                Continuer sur WhatsApp
+              </a>
+              <a class="button button-small button-secondary phone-link" href="tel:+2250758699590">
+                Appeler le CIPC
+              </a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="index.html" aria-label="CIPC — Accueil">
+            <img
+              src="images/logo-cipc.png"
+              alt=""
+              class="logo-cipc"
+              width="55"
+              height="55"
+              loading="lazy"
+            >
+            <span class="brand-text">
+              <b>CIPC</b>
+              <small>Centre Impact de la Parole faite Chair</small>
+            </span>
+          </a>
+          <p>
+            Une communauté chrétienne à Abidjan. Les informations officielles
+            seront complétées après validation par l'Église.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h2>Navigation</h2>
+          <nav class="footer-links" aria-label="Liens du pied de page">
+            <a href="index.html">Accueil</a>
+            <a href="index.html#evenements">Événements</a>
+            <a href="departements.html">Départements</a>
+            <a href="vocations.html">Messages</a>
+          </nav>
+        </div>
+        <div class="footer-column">
+          <h2>Contact</h2>
+          <div class="footer-links">
+            <a href="tel:+2250758699590">07 58 69 9590</a>
+            <a href="index.html#contact">Abidjan, Côte d'Ivoire</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h2>Réseaux et diffusions</h2>
+          <div class="footer-links">
+            <span>Liens officiels à communiquer par l'Église.</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span class="year"></span> CIPC — Tous droits réservés.</p>
+        <p>Centre Impact de la Parole faite Chair · Abidjan</p>
+      </div>
+    </footer>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/2250758699590"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contacter le CIPC sur WhatsApp"
+      title="Contacter le CIPC sur WhatsApp"
+    >
+      <img src="images/BTN-WhatsApp.png" alt="" width="64" height="64">
+    </a>
+    <button class="back-to-top" type="button" aria-label="Retour en haut de page">
+      ↑
+    </button>
+  </body>
+</html>
